@@ -1,4 +1,5 @@
 using myfinance_web_netcore.Infrastructure;
+using myfinance_web_netcore.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<MyFinanceDbContext>();
 
+//Discutir sobre Scoped, Transient, Singleton
+builder.Services.AddScoped<IPlanoContaService, PlanoContaService>();
 
 var app = builder.Build();
 

@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using myfinance_web_netcore.Models;
 using myfinance_web_netcore.Infrastructure;
 
-
 namespace myfinance_web_netcore.Controllers;
 
 public class HomeController : Controller
@@ -11,7 +10,6 @@ public class HomeController : Controller
     private readonly ILogger<HomeController> _logger;
     private MyFinanceDbContext _myFinanceDbContext;
     
-
     public HomeController(
         ILogger<HomeController> logger,
         MyFinanceDbContext myFinanceDbContext)
